@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-interface IBEP20 {
+interface BEP20 {
     function totalSupply() external view returns (uint256);
     function decimals() external view returns (uint8);
     function symbol() external view returns (string memory);
@@ -17,7 +17,7 @@ interface IBEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract MyToken is IBEP20 {
+contract MyToken is BEP20 {
     string public override name = "OnTopOFTheRest"; // Numele token-ului
     string public override symbol = "OTR";  // Simbolul token-ului
     uint8 public override decimals = 9;    // Numărul de zecimale
